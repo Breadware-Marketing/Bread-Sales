@@ -45,7 +45,7 @@ class ViewContactsTestCase(TestCase, SampleData):
         self.client = APIClient()
         self.contact_data = {
             "name":"Eduardo Morales",
-            "company": self.create_company(),
+            "company": 1,
             "location":"Reno, Nevada",
             "title":"Marketing Manager",
             "email":"emorales@breadware.com"
