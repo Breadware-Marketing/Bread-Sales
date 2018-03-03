@@ -41,7 +41,7 @@ class Contacts(ModelBase):
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     location = models.CharField(max_length=255, default='', )
     title = models.CharField(max_length=255, default='', )
-    email = models.EmailField(default='', unique=True)
+    email = models.EmailField(default='', blank='true', unique=True)
 
     def __str__(self):
         """Return the Company info"""
