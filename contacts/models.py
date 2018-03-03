@@ -13,11 +13,22 @@ class ModelBase(models.Model):
     class Meta:
         abstract = True
 
+class LeadSource(ModelBase):
+    """
+    LeadSource
+    """
+
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        """Return the Lead Source info"""
+        return "{}".format(self.name)
+
 class Company(ModelBase):
     """
     Companies
     """
-    
+
     name = models.CharField(max_length=255)
     description = models.TextField(default='')
     info_url = models.URLField(max_length=1024, unique=True)
@@ -27,6 +38,7 @@ class Company(ModelBase):
     city = models.CharField(default='', max_length=255)
     country = models.CharField(default='', max_length=255)
     employees = models.IntegerField(null=True, blank=True)
+    lead_source = models.ForeignKey(LeadSource, on_delete=models.CASCADE)
 
     def __str__(self):
         """Return the Company info"""
@@ -36,7 +48,7 @@ class Contacts(ModelBase):
     """
     Individual Contacts At Companies
     """
-    
+
     name = models.CharField(max_length=255)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     location = models.CharField(max_length=255, default='', )
