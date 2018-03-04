@@ -31,13 +31,14 @@ class Company(ModelBase):
 
     name = models.CharField(max_length=255)
     description = models.TextField(default='')
-    info_url = models.URLField(max_length=1024, unique=True)
+    info_url = models.URLField(default='', blank=True, null=True, max_length=1024, unique=True)
     website = models.URLField(default='', max_length=1024, unique=True)
     address = models.CharField(default='', max_length=255)
-    address_2 = models.CharField(default='', blank='true', max_length=255)
+    address_2 = models.CharField(default='', blank=True, max_length=255)
     city = models.CharField(default='', max_length=255)
     country = models.CharField(default='', max_length=255)
     employees = models.IntegerField(null=True, blank=True)
+    tradeshow_booth = models.CharField(default='', max_length=255)
     lead_source = models.ForeignKey(LeadSource, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -53,7 +54,7 @@ class Contacts(ModelBase):
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     location = models.CharField(max_length=255, default='', )
     title = models.CharField(max_length=255, default='', )
-    email = models.EmailField(default='', blank='true', unique=True)
+    email = models.EmailField(default='', blank=True, unique=True)
 
     def __str__(self):
         """Return the Company info"""

@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Company, Contacts
+from .models import Company, Contacts, LeadSource
 
 # Create your tests here.
 
@@ -8,23 +8,28 @@ class SampleData():
     Create all sample Data
     """
 
-    def create_company(self, 
-        name="Breadware", 
-        description ="""Breadware provides a complete IoT product development solution for businesses at 
-        a speed and reliability unmatched in the industry. Our expertise includes PCB development, firmware 
-        and cloud integrations. We have built IoT electronics for our clients who have been successful in 
-        the medical, industrial, wearable, robotics and agricultural markets and do everything from small 
+    def create_leadsource(self, name="Tradeshow"):
+        return LeadSource.objects.create(
+            name = name
+        )
+
+    def create_company(self,
+        name="Breadware",
+        description ="""Breadware provides a complete IoT product development solution for businesses at
+        a speed and reliability unmatched in the industry. Our expertise includes PCB development, firmware
+        and cloud integrations. We have built IoT electronics for our clients who have been successful in
+        the medical, industrial, wearable, robotics and agricultural markets and do everything from small
         prototype runs to large production runs. """,
-        info_url='https://www.linkedin.com/sales/company/6651289/people', 
+        info_url='https://www.linkedin.com/sales/company/6651289/people',
         website='https://breadware.com/',
         address='450 Sinclair St',
-        address_2='', 
-        city='Reno', 
-        country='United States', 
+        address_2='',
+        city='Reno',
+        country='United States',
         employees=20):
 
         return Company.objects.create(
-            name=name, 
+            name=name,
             description=description,
             info_url=info_url,
             website=website,
@@ -32,9 +37,10 @@ class SampleData():
             address_2=address_2,
             city=city,
             country=country,
-            employees=employees
+            employees=employees,
+            lead_source=self.create_leadsource()
         )
-    
+
     def create_contact(self,
         name = "Eduardo Morales",
         location = "Reno, Nevada",
@@ -42,7 +48,7 @@ class SampleData():
         email = "emorales@breadware.com"):
 
         return Contacts.objects.create(
-            name=name, 
+            name=name,
             company=self.create_company(),
             location=location,
             title=title,
