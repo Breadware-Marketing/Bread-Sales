@@ -29,7 +29,7 @@ class Company(ModelBase):
     Companies
     """
 
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     description = models.TextField(default='')
     info_url = models.URLField(null=True, blank=True, max_length=1024)
     website = models.URLField(null=True, blank=True, max_length=1024)
