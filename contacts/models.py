@@ -51,9 +51,10 @@ class Contacts(ModelBase):
     """
 
     name = models.CharField(max_length=255)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    location = models.CharField(max_length=255, default='', )
-    title = models.CharField(max_length=255, default='', )
+    company = models.CharField(max_length=255)
+    location = models.CharField(max_length=255, default='')
+    title = models.CharField(max_length=255, default='')
+    website = models.URLField(null=True, blank=True, default='')
     email = models.EmailField(default='', blank=True, unique=True)
 
     def __str__(self):
