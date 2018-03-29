@@ -20,5 +20,5 @@ class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Contacts
-        fields = ('name', 'company', 'location', 'title', 'email')
+        fields = ('name', 'company', 'location', 'title', 'email', 'website')
         read_only_fields = ('created_at', 'updated_at')
