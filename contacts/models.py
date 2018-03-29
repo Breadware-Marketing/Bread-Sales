@@ -55,7 +55,7 @@ class Contacts(ModelBase):
     location = models.CharField(max_length=255, default='')
     title = models.CharField(max_length=255, default='')
     website = models.URLField(null=True, blank=True, default='')
-    email = models.EmailField(default='', blank=True, unique=True)
+    email = models.CharField(max_length=255, default='', blank=True, unique=True)
 
     def __str__(self):
         """Return the Company info"""
