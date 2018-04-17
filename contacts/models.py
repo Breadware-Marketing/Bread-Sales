@@ -29,17 +29,14 @@ class Company(ModelBase):
     Companies
     """
 
-    name = models.CharField(max_length=255, unique=True)
-    description = models.TextField(default='')
-    info_url = models.URLField(null=True, blank=True, max_length=1024)
-    website = models.URLField(null=True, blank=True, max_length=1024)
-    address = models.CharField(null=True, blank=True, max_length=255)
-    address_2 = models.CharField(null=True, blank=True, max_length=255)
-    city = models.CharField(default='', max_length=255)
-    country = models.CharField(default='', max_length=255)
-    employees = models.IntegerField(null=True, blank=True)
-    tradeshow_booth = models.CharField(default='', max_length=255)
-    lead_source = models.ForeignKey(LeadSource, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255, unique=False, default='')
+    linkedin_url = models.CharField(max_length=1024, unique=True, default='')
+    website = models.CharField(max_length=1024, unique=False, default='')
+    geography = models.CharField(max_length=255, unique=False, default='')
+    industry = models.CharField(max_length=255, unique=False, default='')
+    company_headcount = models.CharField(max_length=255, unique=False, default='')
+    employees_on_linkedin = models.CharField(max_length=255, unique=False, default='')
+    companyId = models.CharField(max_length=255, unique=False, default='')
 
     def __str__(self):
         """Return the Company info"""
