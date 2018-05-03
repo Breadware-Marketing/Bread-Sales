@@ -9,7 +9,7 @@ class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Company
-        fields = ('name', 'linkedin_url', 'website', 'geography', 'industry', 'company_headcount', 'employees_on_linkedin', 'companyId')
+        fields = ('id', 'name', 'linkedin_url', 'website', 'geography', 'industry', 'company_headcount', 'employees_on_linkedin', 'companyId')
         read_only_fields = ('created_at', 'updated_at')
 
 class ContactSerializer(serializers.ModelSerializer):

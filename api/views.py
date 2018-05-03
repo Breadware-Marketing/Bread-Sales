@@ -18,6 +18,14 @@ class CreateCompanyView(generics.ListCreateAPIView):
         """Save the Post data when creating a new Company."""
         serializer.save()
 
+class DetailsCompanyView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    This Class handles GET, PUT, PATCH and DELETE requests
+    """
+
+    queryset = Company.objects.all()
+    serializer_class = CompanySerializer
+
 class CreateContactView(generics.ListCreateAPIView):
     """
     This Class Defines the Create Behavior of the Rest API

@@ -1,9 +1,10 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from .views import CreateCompanyView, CreateContactView
+from .views import CreateCompanyView, CreateContactView, DetailsCompanyView
 
 urlpatterns = {
     url(r'^company/$', CreateCompanyView.as_view(), name="create"),
+    url(r'^company/(?P<pk>[0-9]+)/$', DetailsCompanyView.as_view(), name="details"),
     url(r'^contacts/$', CreateContactView.as_view(), name="create"),
 }
 
