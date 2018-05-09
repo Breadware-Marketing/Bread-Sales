@@ -1,0 +1,59 @@
+.nav{
+    background: #1c262f;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    z-index: 10;
+  }
+
+.side-nav--compact{
+    flex-basis: auto;
+    width: auto;
+    display: flex;
+}
+
+.nav-nav-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 2.0125rem;
+    justify-content: space-between;
+    margin: 0;
+    min-height: 57px;
+    width: 16.275rem;
+}
+
+.index-side-nav-compact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.nav-header{
+    background: transparent url(https://s3-us-west-2.amazonaws.com/www.breadware.com/logos/breadware-light.svg) no-repeat .875rem;
+    height: 43px;
+    margin-left: 1px;
+    min-height: 43px;
+    margin: 25px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-top-links{
+    flex: 1 0 0;
+    flex-grow: 1;
+}
+
+.nav-top-links-list{
+    color: #dbe2e8;
+    position: relative;
+    transition: color .2s ease-in-out;
+    padding: 6px 15px 6px 16px;
+}

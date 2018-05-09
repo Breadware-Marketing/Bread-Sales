@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    color: #525c65;
+    font-size: 16px !important;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'proxima-nova', 'sans-serif';
+    font-weight: 700;
+}
+  
+h2 strong, h3 strong, h4 strong {
+      font-family: 'proxima-nova','sans-serif';
+      font-weight: 700;
+}
+  
+p{
+    font-size: 1em;
+    line-height: 1.95em;
+    margin-bottom: 1em;
+    font-weight: 400;
+    font-family: 'proxima-nova','sans-serif';
+}
+
+html li{
+      list-style: none;
+}
