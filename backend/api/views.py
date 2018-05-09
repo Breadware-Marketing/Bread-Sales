@@ -37,3 +37,11 @@ class CreateContactView(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         """Save the Post data when creating a new Contact."""
         serializer.save()
+
+class DetailsContactView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    This Class handles GET, PUT, PATCH and DELETE requests
+    """
+
+    queryset = Contacts.objects.all()
+    serializer_class = ContactSerializer
