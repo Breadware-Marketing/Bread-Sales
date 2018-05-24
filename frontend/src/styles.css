@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
-    color: #525c65;
-    font-size: 16px !important;
-    font-family: 'Open Sans', sans-serif;
+html, html body {
+    color: #58646d;
+    font-size: 16px!important;
+    line-height: 1.3125rem;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -11,6 +11,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
+    font-size: 100%;
+    font: inherit;
     vertical-align: baseline;
 }
 
@@ -43,3 +45,4 @@ p{
 html li{
       list-style: none;
 }
+

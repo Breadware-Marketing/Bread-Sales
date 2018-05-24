@@ -5,18 +5,24 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 // Components
-import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
+import { AuthService } from './services/auth.service';
+import { CompaniesService } from './services/companies.service';
+import { ContactsService } from './services/contacts.service';
 
 // Services
-import { AuthService } from './services/auth.service';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { CompaniesComponent } from './components/companies/companies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    ContactsComponent,
+    CompaniesComponent
   ],
   imports: [
     BrowserModule,
@@ -25,10 +31,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: 'dashboard', component: DashboardComponent },
+      { path: 'contacts', component: ContactsComponent },
+      { path: 'companies', component: CompaniesComponent },
       { path: '**', redirectTo: 'login', pathMatch: 'full' }
     ])
   ],
-  providers: [AuthService],
+  providers: [AuthService, CompaniesService, ContactsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

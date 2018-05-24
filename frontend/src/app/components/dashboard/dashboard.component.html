@@ -7,12 +7,39 @@
             <div class="nav-header"></div>
             <ul class="nav-top-links">
               <li class="nav-top-links-list"> 
-                Contacts
+                <a class="link" routerLink="/dashboard" routerLinkActive="active">
+                  Home
+                </a>
               </li>
               <li class="nav-top-links-list"> 
-                Companies
+                <a class="link" routerLink="/contacts" routerLinkActive="active">
+                  Contacts
+                </a>
+              </li>
+              <li class="nav-top-links-list"> 
+                <a class="link" routerLink="/companies" routerLinkActive="active">
+                  Companies
+                </a>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="index-title-area">
+        <div class="_header--header">
+          <h2 class="_header--page-title">
+            Home
+          </h2>
+        </div>
+      </div>
+      <div class="index-content-area">
+        <div class="main-layout-content">
+          <div class="layout--body">
+            <div class="_main--main">
+              <app-companies></app-companies>
+            </div>
           </div>
         </div>
       </div>

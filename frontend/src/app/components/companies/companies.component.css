@@ -1,0 +1,72 @@
+h1 {
+    font-size: 1.5em;
+    margin: 40px 0;
+    font-weight: 400;   
+}
+
+.data-container{
+    display: block;
+}
+
+.company-container, .company-header{
+    background: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+    align-items: stretch;
+    padding: 15px;
+}
+
+.company-container{
+    border-bottom: 1px solid #eee;
+}
+
+.company-container:hover{
+    background-color: #eee;
+}
+
+.company-container__id, .company-header__id, .company-container__name, .company-header__name, .company-container__employees, .company-header__employees,
+.company-container__website, .company-header__website, .company-container__location, .company-header__location, .company-container__industry, 
+.company-header__industry, .company-container__delete, .company-header__deleteY{
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    overflow-x: auto;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.company-container__id, .company-header__id{
+    width: 5%;
+}
+
+.company-container__name, .company-header__name{
+    width: 15%;
+}
+
+.company-container__website, .company-header__website{
+    width: 20%;
+}
+
+.company-container__industry, .company-header__industry{
+    width: 15%;
+}
+
+.company-container__employees, .company-header__employees{
+    width: 20%;
+}
+
+.company-container__location, .company-header__location{
+    width: 15%;
+}
+
+.company-container__delete, .company-header__delete{
+    width: 10%;
+}
+
+.company-text{
+    font-size: 16px;
+}

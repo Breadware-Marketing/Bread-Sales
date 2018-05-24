@@ -1,0 +1,133 @@
+<div class="companies">
+  <h3 *ngIf="companyIdToUpdate; else create">
+    Update Company For ID: {{ companyIdToUpdate }}
+  </h3>
+  <ng-template #create>
+    <h3> Create New Company </h3>
+  </ng-template>
+
+  <!-- <div>
+    <form [formGroup]="companyForm" (ngSubmit)="onCompanyFormSubmit()">
+      <table>
+        <tr>
+          <td>Enter Name</td>
+          <td>
+            <input formControlName="name">
+            <label *ngIf="companyForm.get('name').invalid && processValidation" [ngClass]="'error'"> Name is required. </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Enter Industry</td>
+          <td>
+            <input formControlName="industry">
+            <label *ngIf="companyForm.get('industry').invalid && processValidation" [ngClass]="'error'"> Industry is required. </label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button *ngIf="!companyIdToUpdate">CREATE</button>
+            <button *ngIf="companyIdToUpdate">UPDATE</button>
+            <button (click)="backToCreateCompany()" *ngIf="companyIdToUpdate">Go Back</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <br/> -->
+    <!-- <div *ngIf="statusCode; else processing">
+      <div *ngIf="statusCode === 201" [ngClass]="'success'">
+        Company added successfully.
+      </div>
+      <div *ngIf="statusCode === 409" [ngClass]="'success'">
+        Company already exists.
+      </div>
+      <div *ngIf="statusCode === 200" [ngClass]="'success'">
+        Company updated successfully.
+      </div>
+      <div *ngIf="statusCode === 204" [ngClass]="'success'">
+        Company deleted successfully.
+      </div>
+      <div *ngIf="statusCode === 500" [ngClass]="'error'">
+        Internal Server Error.
+      </div>
+    </div>
+    <ng-template #processing>
+      <img *ngIf="requestProcessing" src="assets/images/loading.gif">
+    </ng-template> -->
+  <!-- </div> -->
+
+  <h1 (click)="downloadAll()">Company Details ({{ allCompanies.length }})</h1>
+  <div class="data-container">
+    <div class="company-header">
+      <div class="company-header__id">
+        <h3>
+          ID
+        </h3>
+      </div>
+      <div class="company-header__name">
+        <h3>
+          Name
+        </h3>
+      </div>
+      <div class="company-header__website">
+        <h3>
+          Website
+        </h3>
+      </div>
+      <div class="company-header__industry">
+        <h3>
+          Industry
+        </h3>
+      </div>
+      <div class="company-header__employees">
+        <h3>
+          Employees
+        </h3>
+      </div>
+      <div class="company-header__location">
+        <h3>
+          Location
+        </h3>
+      </div>
+      <div class="company-header__delete">
+        <h3>
+          Delete
+        </h3>
+      </div>
+    </div>
+    <div class="company-container" *ngFor="let company of allCompanies">
+      <div class="company-container__id">
+        <span class="company-text">
+          {{company.id}}
+        </span>
+      </div>
+      <div class="company-container__name">
+        <span class="company-text">
+          {{company.name}}
+        </span>
+      </div>
+      <div class="company-container__website">
+        <span class="company-text">
+          {{company.website}}
+        </span>
+      </div>
+      <div class="company-container__industry">
+        <span class="company-text">
+          {{company.industry}}
+        </span>
+      </div>
+      <div class="company-container__employees">
+        <span class="company-text">
+          {{company.employees_on_linkedin}}
+        </span>
+      </div>
+      <div class="company-container__location">
+        <span class="company-text">
+          {{company.geography}}
+        </span>
+      </div>
+      <div class="company-container__delete">
+        <button type="button" (click)="deleteCompany(company.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

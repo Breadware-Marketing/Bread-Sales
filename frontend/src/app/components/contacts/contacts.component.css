@@ -1,0 +1,72 @@
+h1 {
+    font-size: 1.5em;
+    margin: 40px 0;
+    font-weight: 400;   
+}
+
+.data-container{
+    display: block;
+}
+
+.contact-container, .contact-header{
+    background: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+    align-items: stretch;
+    padding: 15px;
+}
+
+.contact-container{
+    border-bottom: 1px solid #eee;
+}
+
+.contact-container:hover{
+    background-color: #eee;
+}
+
+.contact-container__id, .contact-header__id, .contact-container__name, .contact-header__name, .contact-container__title, .contact-header__title,
+.contact-container__company, .contact-header__company, .contact-container__location, .contact-header__location, .contact-container__email, 
+.contact-header__email, .contact-container__delete, .contact-header__deleteY{
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    overflow-x: auto;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.contact-container__id, .contact-header__id{
+    width: 5%;
+}
+
+.contact-container__name, .contact-header__name{
+    width: 15%;
+}
+
+.contact-container__company, .contact-header__company{
+    width: 20%;
+}
+
+.contact-container__email, .contact-header__email{
+    width: 15%;
+}
+
+.contact-container__title, .contact-header__title{
+    width: 20%;
+}
+
+.contact-container__location, .contact-header__location{
+    width: 15%;
+}
+
+.contact-container__delete, .contact-header__delete{
+    width: 10%;
+}
+
+.contact-text{
+    font-size: 16px;
+}

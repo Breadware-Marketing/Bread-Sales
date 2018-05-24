@@ -1,0 +1,81 @@
+<div class="contacts">
+    <h1>Contact Details ({{ allContacts.length }})</h1>
+  
+    <div class="data-container">
+      <div class="contact-header">
+        <div class="contact-header__id">
+          <h3>
+            ID
+          </h3>
+        </div>
+        <div class="contact-header__name">
+          <h3>
+            Name
+          </h3>
+        </div>
+        <div class="contact-header__company">
+          <h3>
+            Company
+          </h3>
+        </div>
+        <div class="contact-header__email">
+          <h3>
+            Email
+          </h3>
+        </div>
+        <div class="contact-header__title">
+          <h3>
+            Title
+          </h3>
+        </div>
+        <div class="contact-header__location">
+          <h3>
+            Location
+          </h3>
+        </div>
+        <div class="contact-header__delete">
+          <h3>
+            Delete
+          </h3>
+        </div>
+      </div>
+      <div class="contact-container" *ngFor="let contact of allContacts">
+        <div class="contact-container__id">
+            <span class="contact-text">
+                {{contact.id}}
+            </span>
+        </div>
+        <div class="contact-container__name">
+          <span class="contact-text">
+              {{contact.name}}
+          </span>
+        </div>
+        <div class="contact-container__company">
+          <span class="contact-text">
+              {{contact.company}}
+          </span>
+        </div>
+        <div class="contact-container__email">
+          <span class="contact-text">
+              {{contact.email}}
+          </span>
+        </div>
+        <div class="contact-container__title">
+          <span class="contact-text">
+              {{contact.title}}
+          </span>
+        </div>
+        <div class="contact-container__location">
+          <span class="contact-text">
+              {{contact.location}}
+          </span>
+        </div>
+        <div class="contact-container__delete">
+            <button type="button" (click)="deleteContact(contact.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  
+  
