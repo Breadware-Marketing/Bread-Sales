@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { CompaniesComponent } from './components/companies/companies.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CompaniesComponent } from './components/companies/companies.component';
     LoginComponent,
     DashboardComponent,
     ContactsComponent,
-    CompaniesComponent
+    CompaniesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import { CompaniesComponent } from './components/companies/companies.component';
       { path: 'dashboard', component: DashboardComponent },
       { path: 'contacts', component: ContactsComponent },
       { path: 'companies', component: CompaniesComponent },
+      { path: 'signup', component: RegisterComponent },
       { path: '**', redirectTo: 'login', pathMatch: 'full' }
     ])
   ],
