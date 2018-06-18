@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent  {
   user: User = new User();
 
   constructor(private auth: AuthService, private router: Router) { }

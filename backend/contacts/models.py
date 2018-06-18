@@ -37,6 +37,10 @@ class Company(ModelBase):
     company_headcount = models.CharField(max_length=255, unique=False, default='')
     employees_on_linkedin = models.CharField(max_length=255, unique=False, default='')
     companyId = models.CharField(max_length=255, unique=False, default='')
+    employee_first_name = models.CharField(max_length=255, unique=False, default='')
+    employee_last_name = models.CharField(max_length=255, unique=False, default='')
+    employee_email = models.CharField(max_length=255, unique=False, default='')
+    employee_position = models.CharField(max_length=255, unique=False, default='')
 
     def __str__(self):
         """Return the Company info"""
