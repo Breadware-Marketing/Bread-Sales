@@ -104,6 +104,10 @@ export class CompaniesComponent implements OnInit {
     }, errorCode => (this.statusCode = errorCode));
   }
 
+  getLead(companyId: string){
+    console.log(companyId);
+  }
+
   // Perform preliminary processing configurations
   preProcessConfigurations() {
     this.statusCode = null;

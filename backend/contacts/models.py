@@ -51,7 +51,7 @@ class Contacts(ModelBase):
     Individual Contacts At Companies
     """
 
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     company = models.CharField(max_length=255)
     location = models.CharField(max_length=255, default='')
     title = models.CharField(max_length=255, default='')

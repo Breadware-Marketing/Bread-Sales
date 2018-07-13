@@ -93,6 +93,11 @@
           Delete
         </h3>
       </div>
+      <div class="">
+        <h3>
+          Get LeadSource
+        </h3>
+      </div>
     </div>
     <div class="company-container" *ngFor="let company of allCompanies">
       <div class="company-container__id">
@@ -127,6 +132,9 @@
       </div>
       <div class="company-container__delete">
         <button type="button" (click)="deleteCompany(company.id)">Delete</button>
+      </div>
+      <div class="company-container__delete">
+        <button type="button" (click)="getLead(company.companyId)">Get Lead</button>
       </div>
     </div>
   </div>
